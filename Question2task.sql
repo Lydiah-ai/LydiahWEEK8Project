@@ -1,0 +1,19 @@
+-- CREATE database Usertasks;
+
+Use Usertasks;
+
+ -- CREATE TABLE Tasks (
+     TaskID INT PRIMARY KEY AUTO_INCREMENT,
+     Title VARCHAR(100) NOT NULL,
+     Description TEXT,
+     Status VARCHAR(50) NOT NULL,
+     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+ );
+
+ CREATE TABLE Users (
+     UserID INT PRIMARY KEY AUTO_INCREMENT,
+     Name VARCHAR(100) NOT NULL,
+     Email VARCHAR(100) UNIQUE NOT NULL,
+     Password VARCHAR(100) NOT NULL,
+     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+ );
